@@ -19,6 +19,7 @@ export default function Home() {
     async function handleBuscar() {
         try {
             const { status, data } = await api.get(`${cep}/json/`);
+            console.log(data)
 
             if (status != 200 || data.erro) {
                 Alert.alert('Buscar', 'Digite um CEP válido.');
